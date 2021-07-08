@@ -25,7 +25,7 @@ gem 'bcrypt', '~> 3.1.7'
 # gem for make tests
 gem 'rexml', '~> 3'
 
-gem 'faker', '2.1.2'
+gem 'faker', '~> 2'
 
 gem 'bootstrap-will_paginate', '~> 1'
 gem 'will_paginate', '~> 3'
