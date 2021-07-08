@@ -1,11 +1,13 @@
+# frozen_string_literal: true
+
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '3.0.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
-gem 'rails', '~> 6.1.3', '>= 6.1.3.2'
 gem 'bootstrap-sass', '3.4.1'
+gem 'rails', '~> 6.1.3', '>= 6.1.3.2'
 # Use Puma as the app server
 gem 'puma', '~> 5.0'
 # Use SCSS for stylesheets
@@ -20,9 +22,13 @@ gem 'jbuilder', '~> 2.7'
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
 gem 'bcrypt', '~> 3.1.7'
-#gem for make tests
+# gem for make tests
 gem 'rexml', '~> 3'
 
+gem 'faker', '2.1.2'
+
+gem 'bootstrap-will_paginate', '~> 1'
+gem 'will_paginate', '~> 3'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
@@ -33,7 +39,7 @@ group :development, :test do
   # Use sqlite3 as the database for Active Record
   gem 'sqlite3', '~> 1.4'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'byebug', platforms: %i[mri mingw x64_mingw]
 end
 
 group :development do
@@ -42,6 +48,7 @@ group :development do
   # Display performance information such as SQL time and flame graphs for each request in your browser.
   # Can be configured to work on production as well see: https://github.com/MiniProfiler/rack-mini-profiler/blob/master/README.md
   gem 'listen', '~> 3.3'
+  gem 'rubocop'
   gem 'spring', '~> 2.1'
   gem 'spring-watcher-listen', '~> 2.0'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
@@ -52,12 +59,12 @@ group :test do
   gem 'capybara', '>= 3.26'
   gem 'selenium-webdriver', '~> 3'
   # Easy installation and use of web drivers to run system tests with browsers
-  gem 'webdrivers', '~> 4'
-  gem 'rails-controller-testing', '~> 1'
-  gem 'minitest', '~> 5'
-  gem 'minitest-reporters', '~> 1'
   gem 'guard', '~> 2'
   gem 'guard-minitest', '~> 2'
+  gem 'minitest', '~> 5'
+  gem 'minitest-reporters', '~> 1'
+  gem 'rails-controller-testing', '~> 1'
+  gem 'webdrivers', '~> 4'
 end
 
 group :production do
@@ -65,4 +72,4 @@ group :production do
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
