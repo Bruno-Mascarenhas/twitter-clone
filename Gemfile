@@ -24,9 +24,9 @@ gem 'jbuilder', '~> 2.7'
 gem 'bcrypt', '~> 3.1.7'
 # gem for make tests
 gem 'active_storage_validations', '~> 0'
+gem 'faker', '~> 2'
 gem 'image_processing', '~> 1'
 gem 'mini_magick', '~> 4'
-gem 'faker', '~> 2'
 gem 'rexml', '~> 3'
 
 gem 'bootstrap-will_paginate', '~> 1'
@@ -70,8 +70,8 @@ group :test do
 end
 
 group :production do
-  gem 'pg', '~> 1'
   gem 'aws-sdk-s3', '~> 1', require: false
+  gem 'pg', '~> 1'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
