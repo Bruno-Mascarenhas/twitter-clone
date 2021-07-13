@@ -72,14 +72,14 @@ Rails.application.configure do
   config.action_mailer.perform_deliveries = true
   config.action_mailer.delivery_method = :smtp
 
-  host = 'rails-tutorial-bsm.herokuapp.com'
-  config.action_mailer.default_url_options = { host: host }
+  #host = 'rails-tutorial-bsm.herokuapp.com'
+  #config.action_mailer.default_url_options = { host: host }
   ActionMailer::Base.smtp_settings = {
     :user_name => ENV['SENDGRID_USERNAME'],
     :password => ENV['SENDGRID_PASSWORD'],
-    :domain => 'heroku.com',
+    :domain => 'rails-tutorial-bsm.herokuapp.com',
     :address => 'smtp.sendgrid.net',
-    :port => '587',
+    :port => 587,
     :authentication => :plain,
     :enable_starttls_auto => true
   }
