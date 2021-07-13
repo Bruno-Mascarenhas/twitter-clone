@@ -70,8 +70,10 @@ group :test do
 end
 
 group :production do
-  gem 'aws-sdk-s3', '~> 1', require: false
+  gem 'aws-sdk-s3', require: false
   gem 'pg', '~> 1'
+  gem 'aws-sdk-rails'
+  gem 'aws-sdk'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
